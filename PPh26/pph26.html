@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator PPh 26</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator PPh 26</h1>
+
+        <!-- Input Data -->
+        <div class="form-group">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" placeholder="Masukkan Nama">
+        </div>
+        
+        <div class="form-group">
+            <label for="negara">Negara Domisili</label>
+            <input type="text" id="negara" placeholder="Masukkan Negara Domisili">
+        </div>
+
+        <div class="form-group">
+            <label for="mataUang">Mata Uang</label>
+            <select id="mataUang">
+                <option value="IDR">IDR</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <!-- Tambahkan mata uang lainnya jika diperlukan -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="bruto">Penghasilan Bruto</label>
+            <input type="text" id="bruto" placeholder="Masukkan Penghasilan Bruto">
+        </div>
+
+        <div class="form-group">
+            <label for="kurs">Kurs</label>
+            <input type="text" id="kurs" placeholder="Masukkan Kurs (jika bukan IDR)" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="skd">Apakah SKD Ada?</label>
+            <select id="skd">
+                <option value="tidak">Tidak</option>
+                <option value="ya">Ya</option>
+            </select>
+        </div>
+
+        <div id="tarifContainer" class="form-group" style="display: none;">
+            <label for="tarifP3B">Tarif P3B (%)</label>
+            <input type="number" id="tarifP3B" placeholder="Masukkan Tarif P3B">
+        </div>
+
+        <div class="button-group">
+            <button id="hitungBtn" onclick="hitungPPh26()">Hitung</button>
+        </div>
+
+        <div id="hasil" style="display: none;">
+            <h2>Hasil Perhitungan</h2>
+            <p id="detailNama"></p>
+            <p id="detailNegara"></p>
+            <p id="detailBruto"></p>
+            <p id="detailKurs"></p>
+            <p id="detailBrutoIDR"></p>
+            <p id="detailTarif"></p>
+            <p id="detailPPh"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
